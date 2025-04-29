@@ -15,4 +15,4 @@ echo root:$rpassword | sudo chpasswd
 echo "Done with setup..."
 sleep 4
 echo "Rebooting System Now..."
-reboot
+sudo reboot
