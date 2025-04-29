@@ -8,9 +8,9 @@ fi
 
 password=$( shuf -n 1 /usr/share/dict/words )
 echo "Setting up accounts..."
-echo $USER:$password | chpasswd
+echo $USER:$password | sudo chpasswd
 rpassword=$( shuf -n 1 /usr/share/dict/words )
-echo root:$rpassword | chpasswd
+echo root:$rpassword | sudo chpasswd
 echo "Done with setup..."
 sleep 4
 echo "Rebooting System Now..."
