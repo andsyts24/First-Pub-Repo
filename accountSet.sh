@@ -6,7 +6,7 @@ else
   exit
 fi
 
-password=$( shuf -n /usr/share/dict/words )
+password=$( shuf -n 1 /usr/share/dict/words )
 echo "Setting up accounts..."
 echo $USER:$password | chpasswd
 rpassword=$( shuf -n 1 /usr/share/dict/words )
