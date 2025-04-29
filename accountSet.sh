@@ -3,6 +3,7 @@ if [[ "$EUID" = 0 ]]; then
   echo "(1) You are root... Running rest of script..."
 else
   echo "(2) You must be root to run this script..."
+  exit
 fi
 
 password=$( shuf -n /usr/share/dict/words )
