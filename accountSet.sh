@@ -1,5 +1,6 @@
 #!/bin/bash
-if [[ "$EUID" = 0 ]]; then
+suser=$( getent group wheel | grep $USER )
+if [[ "$EUID" = 0 ]] || [[ ; then
   echo "(1) You are root... Running rest of script..."
 else
   echo "(2) You must be root to run this script... Exiting Script"
